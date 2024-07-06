@@ -1,6 +1,9 @@
-import { SignedIn, SignedOut, SignIn, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignIn, UserButton,useUser  } from "@clerk/clerk-react";
+
 
 export default function App() {
+  const { isSignedIn, user, isLoaded } = useUser();
+  console.log(user?.emailAddresses[0].emailAddress||"dsaf")
   return (
     <header>
       <SignedOut>
@@ -9,6 +12,9 @@ export default function App() {
         </div>
       </SignedOut>
       <SignedIn>
+      <div>Hello {user?.fullName||"full"}!</div>
+      <div>Hello {user?.firstName||"first"}!</div>
+      <div>Hello {user?.firstName||"first"}!</div>
         <UserButton showName />
       </SignedIn>
     </header>
