@@ -21,8 +21,8 @@ const Home = () => {
           <div className="flex justify-end m-2 bg-blue-300 p-2 rounded-md">
             <UserButton showName />
           </div>
-         <div className="flex justify-end ">
-            <div className="bg-blue-500 p-2 rounded-md m-2">+ Add Task</div>       
+         <div className="flex justify-end w-[90%]">
+            <div className="bg-blue-500 p-2 rounded-md  ">+ Add Task</div>       
          </div>
           <Task/>
           <Task/>
